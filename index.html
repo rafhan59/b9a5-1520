@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+
+    <header class="mx-auto w-10/12">
+        <nav class=" flex justify-between items-center my-8">
+            <div class="navbar flex justify-between items-center">
+                <div class="flex-1">
+                  <a class="text-black text-2xl lg:text-4xl font-extrabold leading-10 cursor-pointer" href="#">CDM Travels</a>
+                </div>
+                <div class="navbar-center flex-1 hidden lg:flex">
+                  <ul class="px-1 flex gap-8 text-base text-[#030712B3]">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <button class="flex gap-2 border border-green-600 bg-[#1dd1001a] rounded-xl lg:rounded-2xl py-2 lg:py-4 lg:px-8 px-4">
+                    <a class="text-[#1DD100] text-sm lg:text-base">Bus</a>
+                    <img src="./images/bus-icon.png" alt="">
+                </button>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                    </ul>
+                    
+                  </div>
+              </div>
+        </nav>
+        <section id="banner" class="bg-[url(./images/banner.png)] rounded-2xl rounded-b-2xl bg-no-repeat bg-cover">
+            <div class="text flex flex-col justify-center items-center pt-[4.5rem]">
+                <h1 class="text-3xl lg:text-6xl text-white font-extrabold leading-8 lg:leading-[5.25rem] text-center">Smoothest Travel With <span><h1 class="text-[#1DD100]">CDM Travels</h1></span></h1>
+                <p class="mt-4 px-8 pb-8 text-base font-medium leading-6 lg:leading-8 text-white text-center">Unlock Seamless Travel Adventures: <br> Browse, Book, and Board with Ease on Our Bus Booking Platform!</p>
+                <a href="#buyTicket" class="text-black text-xl font-bold py-4 px-8 rounded-xl bg-[#1DD100] mb-40">Buy Tickets</a>
+            </div>
+            <div class="cards">
+
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="bestOffer" class="mx-auto w-10/12 mt-36">
+            <h1 class="text-black font-bold text-4xl text-center">Best offers for you</h1>
+            <div class="cards pt-12 flex justify-center flex-col lg:flex-row gap-2">
+                <div class="card flex-1 bg-[#FFBF0F] rounded-lg flex flex-row">
+                    <div class="text py-14 mx-auto">
+                        <h2 class="uppercase text-[#030712CC] font-inter text-3xl lg:text-5xl font-bold">15% Off</h2>
+                        <p class="text-sm font-bold py-3">on your next purchase</p>
+                        <p class="text-sm">use by january 2024</p>
+                    </div>
+                    <div class="img">
+                        <img class="h-full" src="./images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="code mx-auto py-14">
+                        <div class="text">
+                            <h2 class="uppercase text-[#030712CC] font-inter text-3xl lg:text-5xl font-bold text-center">NEW15</h2>
+                            <p class="text-sm text-center py-3">coupon code</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card flex-1 bg-[#F78C9C] rounded-lg flex flex-row">
+                    <div class="text py-14 mx-auto">
+                        <h2 class="uppercase text-[#030712CC] font-inter text-3xl lg:text-5xl font-bold">20% Off</h2>
+                        <p class="text-sm font-bold py-3">on your next purchase</p>
+                        <p class="text-sm">use by january 2024</p>
+                    </div>
+                    <div class="img">
+                        <img class="h-full" src="./images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="code py-14 mx-auto">
+                        <h2 class="text-[#030712CC] font-inter text-3xl lg:text-5xl font-bold text-center">couple20</h2>
+                        <p class="text-sm text-center py-3">coupon code</p>
+                    </div>
+                </div>
+            </div>
+            <button class="flex border border-green-600 bg-transparent rounded-xl lg:rounded-2xl py-2 lg:py-4 lg:px-8 px-4 mt-16 mx-auto">
+                <a class=" justify-center text-[#1DD100] font-bold text-lg lg:text-base">See all offers</a>
+            </button>
+        </section>
+
+        <section id="buyTicket" class="mx-auto w-10/12 mt-28">
+            <div class="content">
+                <h1 class="mt-28 text-black text-4xl"></h1>
+                <p></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</body>
+</html>
