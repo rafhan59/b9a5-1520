@@ -95,23 +95,23 @@
             </button>
         </section>
 
-        <section id="buyTicket" class="mt-28 mb-6 bg-[#F7F8F8] border-t-2 border-t-[#1DD100] rounded-t-3xl">
+        <section class="mt-28 mb-6 bg-[#F7F8F8] border-t-2 border-t-[#1DD100] rounded-t-3xl">
             <div class="mx-auto w-10/12 content pt-28">
                 <h1 class="mt-28 text-black text-4xl text-center font-bold">CDM Travels</h1>
                 <p class="pt-6 w-3/5 text-center mx-auto leading-7 text-xl font-normal text-[#03071299]">Streamline your travels effortlessly. Book buses online hassle-free. Your journey, your way. Explore, reserve, and ride with confidence. Start your adventure now!</p>
                 <div class="card pt-12 flex items-stretch">
                     <div class="card flex-1 bg-white rounded-lg flex flex-col lg:flex-row gap-8">
                         <div class="text flex-1 pt-10 pl-7">
-                            <div class="card-nav flex justify-between">
+                            <div class="card-nav flex flex-col lg:flex-row justify-between">
                                 <div class="info flex gap-2 items-center">
                                     <img class="w-16 h-10" src="./images/bus-logo.png" alt="">
                                     <div class="name">
                                         <h1 class="text-3xl font-bold">CDM Travels</h1>
-                                        <p class="text-xl font-normal text-[#03071299]">Coach-007-SYL | AC_Business</p>
+                                        <p class="text-xl font-normal text-[#03071299]">Coach-007-SYL | Economy Class</p>
                                     </div>
                                 </div>
                                 <div class="seat-left">
-                                    <button class="flex gap-2 border border-green-600 bg-[#1dd1001a] rounded-xl lg:rounded-2xl py-2 lg:py-4 lg:px-8 px-4">
+                                    <button class="flex gap-2 border border-green-600 bg-[#1dd1001a] rounded-xl lg:rounded-2xl py-2 lg:py-4 lg:px-8 px-4 mt-8 lg:mt-0">
                                         <img src="./images/seat-green.png" alt="">
                                         <a class="text-[#1DD100] text-sm lg:text-base"> <span id="seatLeft">40</span> Seats Left</a>
                                     </button>
@@ -127,7 +127,7 @@
                                         <h2 class="py-6">Departure Time</h2>
                                         <h2 class="py-6">2330 hrs</h2>
                                     </div>
-                                    <div class="flex gap-4 justify-between pt-6">
+                                    <div class="flex flex-col lg:flex-row gap-4 justify-between pt-6">
                                         <a class="bg-[#0307120d] text-base font-medium rounded-md p-4" href="#">Boarding Point - Sayedabad</a>
                                         <a class="bg-[#0307120d] text-base font-medium rounded-md p-4" href="#">Dropping Point - Humayun Rashid Point</a>
                                         <a class="bg-[#0307120d] text-base font-medium rounded-md p-4" href="#">Est. Time - 6 hrs</a>
@@ -138,7 +138,7 @@
                         <div class="img hidden lg:inline">
                             <img src="./images/info-devider.png" alt="">
                         </div>
-                        <div class="flex flex-col justify-center pr-6">
+                        <div class="flex flex-col justify-center pr-6 pb-6 lg:pb-0">
                             <img class="h-10 w-10 mx-auto" src="./images/fare.png" alt="">
                             <h2 class="text-[#030712CC] font-inter text-2xl lg:text-5xl font-bold text-center">550 Taka</h2>
                             <p class="text-sm text-center">Per Seat</p>
@@ -148,11 +148,11 @@
             </div>
 
             <div class="section bg-white mx-auto w-10/12 mt-6 rounded-xl flex flex-col lg:flex-row">
-                <div class="booking mt-8 px-8 divide-y-2 divide-dashed flex-1 border-r-2 border-dashed">
-                    <div class="text">
+                <div id="buyTicket" class="booking mt-8 px-8 flex-1 border-r-2 border-dashed">
+                    <div class="text border-b-2 border-dashed">
                         <h1 class="text-black text-2xl font-bold pb-8">Select Your Seat</h1>
                     </div>
-                    <div class="sign flex justify-between">
+                    <div class="sign flex justify-between border-b-2 border-dashed">
                         <div class="flex gap-2 py-8">
                             <img src="./images/seat-gray.png" alt="">
                             <p class="text-[#03071280]">Available</p>
@@ -162,22 +162,292 @@
                             <p class="text-[#1DD100]">Selected</p>
                         </div>
                     </div>
-                    <div class="seats">
-                        Hello
+                    <div class="seats flex justify-end">
+                        <div class="mt-12 mb-8">
+                            <button class="btn w-auto px-10 mr-0 lg:mr-16">
+                                <img class="h-4 w-4" src="./images/car-steering-wheel.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="seat-booking grid grid-cols-6 px-2 lg:px-8 gap-4">
+
+                        <!-- row--1 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>A</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="A1" class="peer hidden" />
+                            <label for="A1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> A1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="A2" class="peer hidden" />
+                            <label for="A2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> A2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="A3" class="peer hidden" />
+                            <label for="A3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> A3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="A4" class="peer hidden" />
+                            <label for="A4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> A4 </label>
+                        </div>
+
+                        <!-- row--2 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>B</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="B1" class="peer hidden" />
+                            <label for="B1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> B1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="B2" class="peer hidden" />
+                            <label for="B2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> B2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="B3" class="peer hidden" />
+                            <label for="B3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> B3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="B4" class="peer hidden" />
+                            <label for="B4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> B4 </label>
+                        </div>
+
+                        <!-- row--3 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>C</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="C1" class="peer hidden" />
+                            <label for="C1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> C1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="C2" class="peer hidden" />
+                            <label for="C2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> C2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="C3" class="peer hidden" />
+                            <label for="C3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> C3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="C4" class="peer hidden" />
+                            <label for="C4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> C4 </label>
+                        </div>
+
+                         <!-- row--4 -->
+
+                         <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>D</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="D1" class="peer hidden" />
+                            <label for="D1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> D1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="D2" class="peer hidden" />
+                            <label for="D2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> D2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="D3" class="peer hidden" />
+                            <label for="D3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> D3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="D4" class="peer hidden" />
+                            <label for="D4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> D4 </label>
+                        </div>
+
+                         <!-- row--5 -->
+
+                         <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>E</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="E1" class="peer hidden" />
+                            <label for="E1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> E1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="E2" class="peer hidden" />
+                            <label for="E2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> E2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="E3" class="peer hidden" />
+                            <label for="E3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> E3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="E4" class="peer hidden" />
+                            <label for="E4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> E4 </label>
+                        </div>
+
+                        <!-- row--6 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>F</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="F1" class="peer hidden" />
+                            <label for="F1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> F1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="F2" class="peer hidden" />
+                            <label for="F2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> F2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="F3" class="peer hidden" />
+                            <label for="F3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> F3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="F4" class="peer hidden" />
+                            <label for="F4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> F4 </label>
+                        </div>
+
+
+                        <!-- row--7 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>G</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="G1" class="peer hidden" />
+                            <label for="G1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> G1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="G2" class="peer hidden" />
+                            <label for="G2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> G2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="G3" class="peer hidden" />
+                            <label for="G3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> G3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="G4" class="peer hidden" />
+                            <label for="G4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> G4 </label>
+                        </div>
+
+                        <!-- row--8 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>H</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="H1" class="peer hidden" />
+                            <label for="H1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> H1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="H2" class="peer hidden" />
+                            <label for="H2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> H2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="H3" class="peer hidden" />
+                            <label for="H3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> H3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="H4" class="peer hidden" />
+                            <label for="H4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> H4 </label>
+                        </div>
+
+
+                        <!-- row--9 -->
+
+                        <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>I</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="I1" class="peer hidden" />
+                            <label for="I1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> I1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="I2" class="peer hidden" />
+                            <label for="I2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> I2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="I3" class="peer hidden" />
+                            <label for="I3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> I3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="I4" class="peer hidden" />
+                            <label for="I4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> I4 </label>
+                        </div>
+
+
+                         <!-- row--10 -->
+
+                         <div class="sl flex justify-center items-center font-inter text-base font-medium leading-5">
+                            <h1>J</h1>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="J1" class="peer hidden" />
+                            <label for="J1" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> J1 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="J2" class="peer hidden" />
+                            <label for="J2" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> J2 </label>
+                        </div>
+                        <div class="">
+                            
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="J3" class="peer hidden" />
+                            <label for="J3" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> J3 </label>
+                        </div>
+                        <div class="flex flex-row">
+                            <input type="checkbox" id="J4" class="peer hidden" />
+                            <label for="J4" class="select-none cursor-pointer rounded-lg py-1 lg:py-3 text-[#03071280] px-2 lg:px-6 transition-colors duration-200 ease-in-out peer-checked:bg-[#1dd100] peer-checked:text-white font-inter text-base font-medium leading-5 bg-[#f7f8f8] border-0"> J4 </label>
+                        </div>
                     </div>
                 </div>
+                
                 <aside class="px-info">
-                    <div class="booking pt-8 px-8 divide-y-2 divide-dashed">
-                        <div class="text">
-                            <h1 class="text-black text-2xl font-bold pb-8">Select Your Seat</h1>
+                    <div class="booking pt-8 px-8 ">
+                        <div class="text border-b-2 border-dashed pb-8">
+                            <h1 class="text-black text-2xl font-bold">Select Your Seat</h1>
                         </div>
-                        <div class="mini-card ">
+                        <div class="mini-card mt-16">
                             <div class="overflow-x-auto bg-[#F7F8f8]">
-                                <table class="table mt-8">
+                                <table class="table mt-4">
                                   <!-- head -->
                                   <thead class=" text-center text-base font-medium text-black">
                                     <tr>
-                                      <th>Seat</th>
+                                      <th>Seat <sup class="badge text-white bg-[#1DD100]">2</sup></th>
                                       <th>Class</th>
                                       <th>Price</th>
                                     </tr>
@@ -200,7 +470,7 @@
                                     <tr>
                                         <th>Total Price</th>
                                         <th></th>
-                                        <th>   BDT <span id="total">1100</span></th>
+                                        <th>BDT <span id="total">1100</span></th>
                                     </tr>
                                     <tr>
                                         <th>Discount</th>
@@ -208,9 +478,29 @@
                                         <th>- BDT <span id="discount">1100</span></th>
                                     </tr>
                                   </tfoot>
-                                  
                                 </table>
+                                <form action="" class="flex px-4 pt-4">
+                                    <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full" />
+                                    <button class="text-white bg-[#1DD100] px-4 rounded-lg font-bold">Apply</button>
+                                </form>
+                                <div class="flex justify-between px-8 lg:px-4 py-6 ">
+                                    <h2 class="text-base font-bold text-black">Grand Total</h2>
+                                    <h2 class="text-base font-bold text-black">BDT <span id="grandTotal">1100</span></h2>
+                                </div>
                               </div>
+                        </div>
+                        <form action="" class="mt-8 flex flex-col">
+                            <label for="" class="font-inter text-base text-black font-semibold">Passenger Name*</label>
+                            <input type="text" placeholder="Entr your name" class="input input-bordered w-full mt-2" />
+                            <label for="" class="mt-4 font-inter text-base text-black font-semibold">Phone Number*</label>
+                            <input type="text" placeholder="Entr your phone number" class="input input-bordered w-full mt-2" />
+                            <label for="" class="mt-4 font-inter text-base text-black font-semibold">Email ID</label>
+                            <input type="text" placeholder="Entr your email id" class="input input-bordered w-full mt-2" />
+                            <input type="button" value="Next" class="btn bg-[#1DD100] w-full mt-4 text-white font-bold hover:bg-[#1cd100a1]" />
+                        </form>
+                        <div class="terms mt-4 pb-2 flex justify-around underline underline-offset-4 decoration-[#03071299] text-sm font-normal text-[#03071299]">
+                            <a href="#">Terms and Conditions</a>
+                            <a href="#">Cancellation Policy</a>
                         </div>
                     </div>
                 </aside>
