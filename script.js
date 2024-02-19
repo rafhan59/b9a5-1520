@@ -1,5 +1,6 @@
 const seatLeft = document.getElementById('seatLeft');
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
+const promo = document.querySelector('input[type=text]');
 const badge =document.getElementById('badge');
 const total =document.getElementById('total');
 const seatNum = document.getElementById('seatNum');
@@ -66,7 +67,8 @@ const seatLeftCount = () => {
             seatLeft.innerText = 40 - number;
             badge.innerText = number;
             total.innerText = number * 550;
-            seatNum.innerText = element.innerText
+            seatNum.innerText = element.innerText;
+            
         })
     }
 }
@@ -83,25 +85,25 @@ phone.addEventListener('keyup', () => {
 console.log(phone.value)
 
 
-/* function getCheckedValues() {
-    return Array.from(checkboxes)
-    .filter((checkbox) => checkbox.checked)
-    .map((checkbox) => checkbox.value);
-  }
-  
-  const resultEl = document.getElementById('result');
-  
-  document.getElementById('showResult').addEventListener('click', () => {
-    resultEl.innerHTML = getCheckedValues();
-  });
- */
+console.log(promo.value)
 
 
 
 
 
 
-
+document.getElementById('apply').addEventListener('click', () => {
+    // console.log(promo.value)
+    /* if(promo.value === 'NEW15' && total.innerText >= 2000){
+        document.getElementById('disc').classList.remove('hidden')
+        let discPrice = 0;
+        discPrice = 0.15*total.innerText;
+        document.getElementById('discount').innerText = discPrice
+        
+    } */
+    document.getElementById('disc').classList.remove('hidden');
+    promo.value = null
+})
 
 
 
