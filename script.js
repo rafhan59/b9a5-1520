@@ -82,17 +82,14 @@ phone.addEventListener('keyup', () => {
     }
 })
 
-console.log(phone.value)
-
-
-console.log(promo.value)
 
 
 
 
 
 
-document.getElementById('apply').addEventListener('click', () => {
+
+document.getElementById('apply').addEventListener('click', e => {
     // console.log(promo.value)
     /* if(promo.value === 'NEW15' && total.innerText >= 2000){
         document.getElementById('disc').classList.remove('hidden')
@@ -102,7 +99,9 @@ document.getElementById('apply').addEventListener('click', () => {
         
     } */
     document.getElementById('disc').classList.remove('hidden');
-    promo.value = null
+    promo.value = null;
+    document.getElementById('promocode').innerText = 'Promo Code Applied'
+    e.preventDefault()
 })
 
 
