@@ -90,18 +90,30 @@ phone.addEventListener('keyup', () => {
 
 
 document.getElementById('apply').addEventListener('click', e => {
-    // console.log(promo.value)
-    /* if(promo.value === 'NEW15' && total.innerText >= 2000){
-        document.getElementById('disc').classList.remove('hidden')
-        let discPrice = 0;
-        discPrice = 0.15*total.innerText;
-        document.getElementById('discount').innerText = discPrice
+    
+    if(promo.value === 'NEW15' && parseInt(total.innerText) >= 2000 ){
+        document.getElementById('disc').classList.remove('hidden');
+        promo.value = null;
+        document.getElementById('discount').innerText = parseInt(total.innerText)*0.15;
+        document.getElementById('promocode').innerHTML = `<p class='text-green-500 text-center'>'NEW15' is applied</p>`
+        // document.getElementById('coupon').setAttribute('disabled')
+        e.preventDefault()
         
-    } */
-    document.getElementById('disc').classList.remove('hidden');
-    promo.value = null;
-    document.getElementById('promocode').innerText = 'Promo Code Applied'
-    e.preventDefault()
+    } else if(promo.value === 'couple20' && parseInt(total.innerText) >= 2000 ){
+        document.getElementById('disc').classList.remove('hidden');
+        promo.value = null;
+        document.getElementById('discount').innerText = parseInt(total.innerText)*0.2;
+        document.getElementById('promocode').innerHTML = `<p class='text-green-500 text-center'>'couple20' is applied</p>`
+        e.preventDefault()
+        
+    } else if ((promo.value === 'NEW15' || promo.value === 'couple20') && (parseInt(total.innerText) < 2000)){
+        document.getElementById('promocode').innerHTML = `<p class='text-red-500 text-center'>Total Price should be more than BDT. 2000</p>`
+        e.preventDefault()
+    }
+     else if(promo.value !== 'NEW15' && promo.value !== 'couple20') {
+        document.getElementById('promocode').innerHTML = `<p class='text-red-500 text-center'>Promo Code is not valid</p>`;
+        e.preventDefault()
+    } 
 })
 
 
