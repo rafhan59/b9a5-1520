@@ -8,6 +8,9 @@ const next = document.getElementById('next');
 const phone = document.getElementById('phone')
 const newSeat = document.getElementById('seatNum')
 const data = document.getElementById('data')
+const grandTotal = document.getElementById('grandTotal')
+const discount = document.getElementById('discount')
+const promocode = document.getElementById('promocode')
 
 const newSeatCreate = document.createElement('td');
 
@@ -26,7 +29,6 @@ const seatLeftCount = () => {
 
     for (let i = 0; i < checkboxes.length; i++) {
         const element = checkboxes[i];
-        console.log(element)
         element.addEventListener("change", () => {
             element.checked ? number += 1 : number -= 1;
             
@@ -63,14 +65,22 @@ const seatLeftCount = () => {
                 data.innerHTML = td
                 console.log(td)
             }
-            // console.log(element.id)
             seatLeft.innerText = 40 - number;
             badge.innerText = number;
             total.innerText = number * 550;
-            seatNum.innerText = element.innerText;
+            if(total.innerText < 2000){
+                discount.innerText = 0;
+                promocode.innerText = ''
+            }
+            grandTotal.innerText = total.innerText;
+            /* if(total.innerText >= 2000){
+                grandTotal.innerText = total.innerText - discount.innerText
+            } */
             
+            seatNum.innerText = element.innerText;
         })
     }
+    
 }
 
 seatLeftCount()
@@ -95,25 +105,31 @@ document.getElementById('apply').addEventListener('click', e => {
         document.getElementById('disc').classList.remove('hidden');
         promo.value = null;
         document.getElementById('discount').innerText = parseInt(total.innerText)*0.15;
+        grandTotal.innerText = total.innerText - discount.innerText
         document.getElementById('promocode').innerHTML = `<p class='text-green-500 text-center'>'NEW15' is applied</p>`
-        // document.getElementById('coupon').setAttribute('disabled')
         e.preventDefault()
         
     } else if(promo.value === 'couple20' && parseInt(total.innerText) >= 2000 ){
         document.getElementById('disc').classList.remove('hidden');
         promo.value = null;
         document.getElementById('discount').innerText = parseInt(total.innerText)*0.2;
+        grandTotal.innerText = total.innerText - discount.innerText
         document.getElementById('promocode').innerHTML = `<p class='text-green-500 text-center'>'couple20' is applied</p>`
         e.preventDefault()
         
     } else if ((promo.value === 'NEW15' || promo.value === 'couple20') && (parseInt(total.innerText) < 2000)){
+        document.getElementById('discount').innerText = 0;
+        grandTotal.innerText = total.innerText - discount.innerText
         document.getElementById('promocode').innerHTML = `<p class='text-red-500 text-center'>Total Price should be more than BDT. 2000</p>`
         e.preventDefault()
     }
-     else if(promo.value !== 'NEW15' && promo.value !== 'couple20') {
+     else {
+        grandTotal.innerText = total.innerText - discount.innerText
         document.getElementById('promocode').innerHTML = `<p class='text-red-500 text-center'>Promo Code is not valid</p>`;
         e.preventDefault()
     } 
+    promo.value = null;
+    
 })
 
 
@@ -124,69 +140,3 @@ document.getElementById('apply').addEventListener('click', e => {
 
 
 
-
-/* let number = 0;
-let arr = [];
-
-for (let i = 0; i < checkboxes.length; i++) {
-    console.log(checkboxes[i])
-}
-
-console.log(checkboxes)
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(number)
-/* const ckbx = () => {
-    for (let i = 0; i < checkboxes.length; i++) {
-        console.log(checkboxes[i])
-    }
-}
- */
-/* let number = 0;
-
-for (let i = 0; i < checkboxes.length; i++) {
-    console.log(checkboxes[i])
-}
-
-console.log(checkboxes)
-console.log(number)
- */
-/* 
-document.getElementById('peer').addEventListener('change', selectedSeat)
-
-
-
-const selectedSeat = () => {
-     */
-
-
-
-// let number;
-
-/* for (let i = 0; i < checkbox.length; i++) {
-    
-    if (checkbox[i].checked){
-        // number += 1
-        console.log(checkbox[i].checked)
-    } 
-}
- */
-// console.log(number)
