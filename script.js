@@ -72,11 +72,7 @@ const seatLeftCount = () => {
                 discount.innerText = 0;
                 promocode.innerText = ''
             }
-            grandTotal.innerText = total.innerText;
-            /* if(total.innerText >= 2000){
-                grandTotal.innerText = total.innerText - discount.innerText
-            } */
-            
+            grandTotal.innerText = total.innerText - discount.innerText;
             seatNum.innerText = element.innerText;
         })
     }
