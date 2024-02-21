@@ -81,10 +81,13 @@ const seatLeftCount = () => {
 
 seatLeftCount()
 
-phone.addEventListener('keyup', () => {
-    console.log(phone.value)
-    if(phone.value){
+phone.addEventListener('change', e => {
+    if(e.target.value){
         next.removeAttribute('disabled')
+        // console.log(phone.value.split('').length)
+    } else if(e.target.value = ''){
+        // e.target.value = '';
+        next.classList.add('cursor-not-allowed')
     }
 })
 
